@@ -1,6 +1,7 @@
 # Put here all files we want git to ignore when creating a commit to our project
 
 config.php
+
 #Mac OS X files 
 .DS_Store
 

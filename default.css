@@ -3,6 +3,14 @@ body {
 	font-size: 100%;
 }
 
+h1 {
+	font-size: 20pt;
+}
+
+h2 {
+	font-size: 18pt;
+}
+
 p {
 	margin: 8px;
 }
