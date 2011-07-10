@@ -15,6 +15,8 @@ class FacebookApp
 	private $id;
 	private $secretKey;
 	
+	private static $cache = array ( );
+	
 	/**
 	 * Loads FacebookApp instance using application identifier and secret key from cache.
 	 *
@@ -23,7 +25,13 @@ class FacebookApp
 	 **/
 	public static function loadFromCache ( $id, $secretKey )
 	{
+		$key = $id.$secretKey;
 		
+		if(!isset(self::$cache[$key])) {
+			self::$cache[$key] = new FacebookApp($id, $secretKey);
+		}
+		
+		return self::$cache[$key];
 	}
 	
 	private function __construct($id, $secretKey)
