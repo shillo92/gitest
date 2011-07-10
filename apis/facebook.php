@@ -1,10 +1,8 @@
 <?php
-/**
- * Facebook API.
- */
-class FacebookAPI
+class FacebookUser
 {
-	
+	private $id;
+	private $name;
 }
 
 /**
